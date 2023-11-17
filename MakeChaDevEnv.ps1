@@ -60,7 +60,7 @@ $MinGw64Local="./download/mingw64.7z"
 $VcpkgURL="https://github.com/Microsoft/vcpkg.git"
 
 $iconURL="https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/CDE.ico"
-$iconLocal
+$iconLocal="CDE.ico"
 
 $launcherLocal="./launch.cmd"
 
