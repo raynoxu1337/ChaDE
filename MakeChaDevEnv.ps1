@@ -32,11 +32,13 @@ ________                     .__                                       __
  if ($flavor){
         echo "OSS VSCodium is being used."
         $vsCodiumURL='https://github.com/VSCodium/vscodium/releases/download/1.84.2.23319/VSCodium-win32-x64-1.84.2.23319.zip'
+        $launcherURL="https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/launchOSS.cmd"
     }
     else
     {
         echo "MS VSCode is being used."
         $vsCodiumURL='https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive'
+        $launcherURL="https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/launchMS.cmd"
     }
 $vsCodiumLocal='./download/vsCodium.zip'
 
@@ -57,12 +59,21 @@ $MinGw64Local="./download/mingw64.7z"
 
 $VcpkgURL="https://github.com/Microsoft/vcpkg.git"
 
+$iconURL="https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/CDE.ico"
+$iconLocal
+
+$launcherLocal="./launch.cmd"
+
 mkdir download
 mkdir ChaDEnv
 
 # Setup the launch scripts here!!
 
 $ProgressPreference = 'SilentlyContinue'
+#Download icon
+Invoke-WebRequest $iconURL -OutFile $iconLocal
+#Download launch script
+Invoke-WebRequest $launcherURL -OutFile $launcherLocal
 # Downlaod 7z portable to extract other things
 echo "Downloading 7zr and 7za..."
 Invoke-WebRequest $7zrURL -OutFile $7zrLocal
