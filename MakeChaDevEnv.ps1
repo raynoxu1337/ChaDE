@@ -51,10 +51,11 @@ $7zLocal='./download/7z.7z'
 $gitURL='https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/PortableGit-2.42.0.2-64-bit.7z.exe'
 $gitLocal='./download/git.sfx'
 
-$CmakeURL="https://github.com/Kitware/CMake/releases/download/v3.28.0-rc4/cmake-3.28.0-rc4-windows-x86_64.zip"
-$CmakeLocal="./download/cmake.zip"
+#$CmakeURL="https://github.com/Kitware/CMake/releases/download/v3.28.0-rc4/cmake-3.28.0-rc4-windows-x86_64.zip"
+#$CmakeLocal="./download/cmake.zip"
 
-$MinGw64URL="https://github.com/niXman/mingw-builds-binaries/releases/download/13.2.0-rt_v11-rev0/x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0.7z"
+#$MinGw64URL="https://github.com/niXman/mingw-builds-binaries/releases/download/13.2.0-rt_v11-rev0/x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0.7z"
+$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0-16.0.6-11.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-16.0.6-mingw-w64ucrt-11.0.0-r1.7z"
 $MinGw64Local="./download/mingw64.7z"
 
 $VcpkgURL="https://github.com/Microsoft/vcpkg.git"
@@ -97,11 +98,11 @@ echo "Downloading Git..."
 Invoke-WebRequest $gitURL -OutFile $gitLocal
 Start-Process './ChaDEnv/7zip/7za.exe' "x ./download/git.sfx -o./ChaDEnv/git *.* -r -y" -NoNewWindow -Wait
 # Download Cmake
-echo "Downloading Cmake..."
-Invoke-WebRequest $cmakeURL -OutFile $cmakeLocal
-Start-Process './ChaDEnv/7zip/7za.exe' "x ./download/cmake.zip -o./ChaDEnv/cmake *.* -r -y" -NoNewWindow -Wait
+#echo "Downloading Cmake..."
+#Invoke-WebRequest $cmakeURL -OutFile $cmakeLocal
+#Start-Process './ChaDEnv/7zip/7za.exe' "x ./download/cmake.zip -o./ChaDEnv/cmake *.* -r -y" -NoNewWindow -Wait
 # Download MinGw64
-echo "Downloading MinGw64..."
+echo "Downloading compiler toolchain..."
 Invoke-WebRequest $MinGw64URL -OutFile $MinGw64Local
 Start-Process './ChaDEnv/7zip/7za.exe' "x ./download/mingw64.7z -o./ChaDEnv/mingw64 *.* -r -y" -NoNewWindow -Wait
 # Download Vcpkg
