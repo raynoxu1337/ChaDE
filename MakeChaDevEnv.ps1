@@ -55,7 +55,8 @@ $gitLocal='./download/git.sfx'
 #$CmakeLocal="./download/cmake.zip"
 
 #$MinGw64URL="https://github.com/niXman/mingw-builds-binaries/releases/download/13.2.0-rt_v11-rev0/x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0.7z"
-$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0-16.0.6-11.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-16.0.6-mingw-w64ucrt-11.0.0-r1.7z"
+#$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0-16.0.6-11.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-16.0.6-mingw-w64ucrt-11.0.0-r1.7z"
+$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0-17.0.4-11.0.1-msvcrt-r2/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-17.0.4-mingw-w64msvcrt-11.0.1-r2.7z"
 $MinGw64Local="./download/mingw64.7z"
 
 $VcpkgURL="https://github.com/Microsoft/vcpkg.git"
