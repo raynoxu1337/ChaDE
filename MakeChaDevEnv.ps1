@@ -123,7 +123,7 @@ if ($flavor){
     echo "Installing MS VSCode needed extensions."
    }
 # remove outdated cmake
-$oldCmakePath=Join-Path $PSScriptRoot -ChildPath 'ChaDEnv/mingw64/mingw64/bin/cmake.exe*'
+$oldCmakePath=Join-Path $PSScriptRoot -ChildPath 'ChaDEnv/mingw64/mingw64/bin/cmake.exe'
 Remove-Item -Path $oldCmakePath -Force -Recurse
 # delete doenloads folder
 $dlPath=Join-Path $PSScriptRoot -ChildPath 'download/*'
