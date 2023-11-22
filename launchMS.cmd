@@ -13,7 +13,7 @@
 
 @set CHAD_VCPKG=%~dp0ChaDEnv\vcpkg\scripts\buildsystems\vcpkg.cmake
 
-@set VCPKG_DEFAULT_TRIPLET=x64-mingw-dynamic
+@set VCPKG_DEFAULT_TRIPLET=x64-mingw-static
 @set VSCPath="%~dp0Code.exe"
 
 @set VSCODE_DEV=
