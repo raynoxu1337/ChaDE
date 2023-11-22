@@ -124,7 +124,7 @@ if ($flavor){
    }
 # remove outdated cmake
 $oldCmakePath=Join-Path $PSScriptRoot -ChildPath 'ChaDEnv/mingw64/mingw64/bin/cmake.exe*'
-Remove-Item -Path $dlPath -Force -Recurse
+Remove-Item -Path $oldCmakePath -Force -Recurse
 # delete doenloads folder
 $dlPath=Join-Path $PSScriptRoot -ChildPath 'download/*'
 Remove-Item -Path $dlPath -Force -Recurse
