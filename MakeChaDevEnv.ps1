@@ -51,7 +51,8 @@ $7zLocal='./download/7z.7z'
 $gitURL='https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/PortableGit-2.42.0.2-64-bit.7z.exe'
 $gitLocal='./download/git.sfx'
 
-$CmakeURL="https://github.com/Kitware/CMake/releases/download/v3.28.0-rc4/cmake-3.28.0-rc4-windows-x86_64.zip"
+#$CmakeURL="https://github.com/Kitware/CMake/releases/download/v3.28.0-rc4/cmake-3.28.0-rc4-windows-x86_64.zip"
+$CmakeURL="https://github.com/Kitware/CMake/releases/download/v3.27.8/cmake-3.27.8-windows-x86_64.zip"
 $CmakeLocal="./download/cmake.zip"
 
 #$MinGw64URL="greleases/download/13.2.0-rt_v11-rev0/x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0.7z"
@@ -100,9 +101,9 @@ echo "Downloading Git..."
 Invoke-WebRequest $gitURL -OutFile $gitLocal
 Start-Process './ChaDEnv/7zip/7za.exe' "x ./download/git.sfx -o./ChaDEnv/git *.* -r -y" -NoNewWindow -Wait
 # Download Cmake
-#echo "Downloading Cmake..."
-#Invoke-WebRequest $cmakeURL -OutFile $cmakeLocal
-#Start-Process './ChaDEnv/7zip/7za.exe' "x ./download/cmake.zip -o./ChaDEnv/cmake *.* -r -y" -NoNewWindow -Wait
+echo "Downloading Cmake..."
+Invoke-WebRequest $cmakeURL -OutFile $cmakeLocal
+Start-Process './ChaDEnv/7zip/7za.exe' "x ./download/cmake.zip -o./ChaDEnv/cmake *.* -r -y" -NoNewWindow -Wait
 # Download MinGw64
 echo "Downloading compiler toolchain..."
 Invoke-WebRequest $MinGw64URL -OutFile $MinGw64Local
@@ -121,6 +122,9 @@ if ($flavor){
    {
     echo "Installing MS VSCode needed extensions."
    }
+# remove outdated cmake
+$oldCmakePath=Join-Path $PSScriptRoot -ChildPath 'ChaDEnv/mingw64/mingw64/bin/cmake.exe*'
+Remove-Item -Path $dlPath -Force -Recurse
 # delete doenloads folder
 $dlPath=Join-Path $PSScriptRoot -ChildPath 'download/*'
 Remove-Item -Path $dlPath -Force -Recurse
