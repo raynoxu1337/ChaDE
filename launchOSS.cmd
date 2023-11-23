@@ -5,6 +5,8 @@
 @set CHAD_MINGW_PATH=;%~dp0ChaDEnv\mingw64\mingw64\bin
 @set CHAD_VCPKG_PATH=;%~dp0ChaDEnv\vcpkg
 
+@set VCPKG_ROOT=;%~dp0ChaDEnv\vcpkg
+
 @set PATH=%PATH%%Z_PATH%
 @set PATH=%PATH%%CHAD_CMAKE_PATH%
 @set PATH=%PATH%%CHAD_GIT_PATH%
