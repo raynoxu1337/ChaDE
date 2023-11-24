@@ -13,6 +13,9 @@
 @set PATH=%PATH%%CHAD_MINGW_PATH%
 @set PATH=%PATH%%CHAD_VCPKG_PATH%
 
+@set CHAD_GCC_FULL_PATH=%~dp0ChaDEnv\mingw64\mingw64\bin\gcc.exe
+@set CHAD_GPP_FULL_PATH=%~dp0ChaDEnv\mingw64\mingw64\bin\g++.exe
+
 @set CHAD_VCPKG=%~dp0ChaDEnv\vcpkg\scripts\buildsystems\vcpkg.cmake
 
 @set VCPKG_DEFAULT_TRIPLET=x64-mingw-static

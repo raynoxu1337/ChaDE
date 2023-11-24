@@ -26,7 +26,7 @@ In the folder there will be a pretty shortcut called ChaDE, right-click and add 
 ### OSS VS Codium
 * You'll figure it out, you're too chad for automatic everything, keep in mind CDE has clang and clangd by default so get clangd probably as LSP and get some debugger action going.
 ## Usage
-You will need the default project to make this the *MOST* convenient, its in a git repo, just download as zip and use it as a basis of your project. Link to repo *Doesn't exist yet lol*.
+You will need the default project to make this the *MOST* convenient, its in a git repo, just download as zip and use it as a basis of your project. Link to repo [ChaDeTemplate(MS)](https://github.com/raynoxu1337/ChDETemplateMS).
 ### Package Manager
 We are using VcPkg to install stuff. To install stuff, in CDE terminal (VsCode or Codium) type:
 > vcpkg install packagename
@@ -45,4 +45,5 @@ Default project already has CMakeLists.txt with all the needed stuff setup. If y
 You will build your code from build tasks defined by default project in Terminal->Run Build Task. You can build Debug or Release flavors, to start the debugger you can just go to the side pane and start debugging, but the debug build first needs to be done, you can also run debugger from the Run->Start Debugging. If you add a new package on VcPkg you will need to clean the build, cofigure and rebuild again, so don't forget that.
 
 ## Improvement
+It could be nice to add some way to change the tripplets from the VSCode, but whatever, its Kenough for the first version.
 I will do my best to maintain this repo. If you like this work please share with friends and don't hesitate to fill a PR, I will gladly merge it if it improves something. If you know how to install the extensions from powershell and make them appear in the portable extensions folder, not the standard, system wide one, let me know, we can make it so the chades extensions are integrated by default. Also if you are using the OSS verison, please add build/launch tasks to the template repo and add a PR to this readme to recommend the best extensions.
