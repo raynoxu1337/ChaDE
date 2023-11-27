@@ -20,6 +20,7 @@
 
 @set VCPKG_DEFAULT_TRIPLET=x64-mingw-static
 @set VCPKG_HOST_TRIPLET=x64-mingw-static
+@set VCPKG_DEFAULT_HOST_TRIPLET=x64-mingw-static
 @set VSCPath="%~dp0VSCodium.exe"
 
 @set VSCODE_DEV=
