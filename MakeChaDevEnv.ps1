@@ -45,7 +45,7 @@ $title   = 'Install MSbuild and Windows SDK?'
  $options = '&Install MSBuid/WindowsSDK', '&No MSBuild/WindowsSDK'
  $default = 0  # 0=Yes, 1=No
 $MSSpyware = $Host.UI.PromptForChoice($title, $msg, $options, $default)
-if ($MSSpyware){
+if ( $MSSpyware -eq 0 ){
 echo "Installing Microsoft tooling ( Check their licences )"
  winget install -e --id Microsoft.WindowsSDK --silent --override "--quiet --passive --norestart --wait --nocache"
  winget install Microsoft.VisualStudio.2022.BuildTools --silent --override "--quiet --passive --norestart --wait --nocache --includeRecommended"
