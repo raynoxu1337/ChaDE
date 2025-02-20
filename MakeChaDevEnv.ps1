@@ -40,8 +40,17 @@ ________                     .__                                       __
         $vsCodiumURL='https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive'
         $launcherURL="https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/launchMS.cmd"
     }
-winget install -e --id Microsoft.WindowsSDK --silent --override "--quiet --passive --norestart --wait --nocache"
-winget install Microsoft.VisualStudio.2022.BuildTools --silent --override "--quiet --passive --norestart --wait --nocache --includeRecommended"
+$title   = 'Install MSbuild and Windows SDK?'
+ $msg     = 'You can only compile OSS dependencies if you do not have the licence for MSbuild'
+ $options = '&Install MSBuid/WindowsSDK', '&No MSBuild/WindowsSDK'
+ $default = 0  # 0=Yes, 1=No
+$MSSpyware = $Host.UI.PromptForChoice($title, $msg, $options, $default)
+if ($MSSpyware){
+echo "Installing Microsoft tooling ( Check their licences )"
+ winget install -e --id Microsoft.WindowsSDK --silent --override "--quiet --passive --norestart --wait --nocache"
+ winget install Microsoft.VisualStudio.2022.BuildTools --silent --override "--quiet --passive --norestart --wait --nocache --includeRecommended"
+}
+
 $vsCodiumLocal='./download/vsCodium.zip'
 
 $7zrURL='https://7-zip.org/a/7zr.exe'
@@ -59,7 +68,8 @@ $CmakeLocal="./download/cmake.zip"
 
 #$MinGw64URL="greleases/download/13.2.0-rt_v11-rev0/x86_64-13.2.0-release-win32-seh-ucrt-rt_v11-rev0.7z"
 #$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-16.0.0-10.0.0-ucrt-r5/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-16.0.0-mingw-w64ucrt-10.0.0-r5.7z"
-$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-16.0.0-10.0.0-msvcrt-r5/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-16.0.0-mingw-w64msvcrt-10.0.0-r5.7z"
+#$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-16.0.0-10.0.0-msvcrt-r5/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-16.0.0-mingw-w64msvcrt-10.0.0-r5.7z"
+$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/14.2.0posix-12.0.0-ucrt-r3/winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3.7z"
 #$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0-16.0.6-11.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-16.0.6-mingw-w64ucrt-11.0.0-r1.7z"
 #$MinGw64URL="https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0-17.0.4-11.0.1-msvcrt-r2/winlibs-x86_64-posix-seh-gcc-13.2.0-llvm-17.0.4-mingw-w64msvcrt-11.0.1-r2.7z"
 $MinGw64Local="./download/mingw64.7z"
