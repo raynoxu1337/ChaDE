@@ -40,8 +40,8 @@ ________                     .__                                       __
         $vsCodiumURL='https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive'
         $launcherURL="https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/launchMS.cmd"
     }
-winget install -e --id Microsoft.WindowsSDK
-winget install Microsoft.VisualStudio.2022.BuildTools
+winget install -e --id Microsoft.WindowsSDK --silent --override "--quiet --passive --norestart --wait --nocache"
+winget install Microsoft.VisualStudio.2022.BuildTools --silent --override "--quiet --passive --norestart --wait --nocache --includeRecommended"
 $vsCodiumLocal='./download/vsCodium.zip'
 
 $7zrURL='https://7-zip.org/a/7zr.exe'
