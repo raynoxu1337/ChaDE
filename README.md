@@ -1,6 +1,6 @@
 # ChaDevelopmentEnvironment
 
-Unlike most c++ IDE's this is not an IDE, this is CDE, short for Chad Development Environment, If "integrated" means spamming your system and $PATH with random incompatible things, the this one is not "integrated", but alot more "chad" because it doesnt create trash in your system, uses free and mostly open source software, supports GCC/Clang and has a WORKING package manager, that does not integrate to your $PATH like a virus and outputs nice .exe files for you friends to run on their Windows pc's. Also it's great to share your c++ projects with your friends as they just need to download CDE. Your Linux/Os X friends will also appreciate this because we are building on GCC/Clang, so they can join the fun.
+Unlike most c++ IDE's this is not an IDE, this is CDE, short for Chad Development Environment, If "integrated" means spamming your system and $PATH with random incompatible things, then this one is not "integrated", but alot more "chad" because it doesn't create trash in your system (except MSVC), uses free and mostly open source software(except MSVC), supports GCC/Clang and has a WORKING package manager, that does not integrate to your $PATH like a virus and outputs nice .exe files for your friends to run on their Windows pc's. Also it's great to share your c++ projects with your friends as they just need to download CDE. Your Linux/Os X friends will also appreciate this because we are building on GCC/Clang, so they can join the fun.
 
 
 TLDR:
@@ -8,8 +8,11 @@ This script will install VScode or VScodium with GNU c++ build tools. Everything
 
 | :exclamation:  Please do not install in path with spaces, CMake WILL HAVE ISSUES!   |
 |-------------------------------------------------------------------------------------|
+| :exclamation:  If your PC restarts after installing the WindowsSDK and BuildTools   |
+| you will need to rerun the script until it completes without a restart!             |
+|-------------------------------------------------------------------------------------|
 
-You only need to [download](https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/MakeChaDevEnv.ps1) (Rightclick save link as) and run the MakeChaDevEnv.ps1 script. The script will install the ChaDE in the same folder it is located in.
+You only need to [download](https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/MakeChaDevEnv.ps1) (Rightclick save link as) and run the MakeChaDevEnv.ps1 script. The script will install the ChaDE in the same folder it is located in. Your PC MIGHT restart, in that case you need to run the script untill it finishes without a restart!
 
 Alternatively you can run the following in the PowerShell when you are located in your desired install folder:
 > Invoke-WebRequest https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/MakeChaDevEnv.ps1 -OutFile ./install.ps1 ; powershell './install.ps1'
@@ -25,7 +28,7 @@ In the folder there will be a pretty shortcut called ChaDE, right-click and add 
 * Install background, id "shalldie.background"
     * This will help you have nice waifu wallpaper, I've tried all the background plugins and this one is the best so far.
 * Change the font to something less dull than usual VSCode, default is depressing.
-* Download a nice theme, it's also pretty depressing.
+* Download a nice theme, default is also pretty depressing.
 ### OSS VS Codium
 * You'll figure it out, you're too chad for automatic everything, keep in mind CDE has clang and clangd by default so get clangd probably as LSP and get some debugger action going.
 ## Usage
