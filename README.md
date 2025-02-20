@@ -8,9 +8,9 @@ This script will install VScode or VScodium with GNU c++ build tools. Everything
 
 | :exclamation:  Please do not install in path with spaces, CMake WILL HAVE ISSUES!   |
 |-------------------------------------------------------------------------------------|
-| :exclamation:  If your PC restarts after installing the WindowsSDK and BuildTools   |
-| you will need to rerun the script until it completes without a restart!             |
-|-------------------------------------------------------------------------------------|
+
+| :exclamation:  If your PC restarts after installing the WindowsSDK and BuildTools   you will need to rerun the script until it completes without a restart!    |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 You only need to [download](https://raw.githubusercontent.com/raynoxu1337/ChaDE/main/MakeChaDevEnv.ps1) (Rightclick save link as) and run the MakeChaDevEnv.ps1 script. The script will install the ChaDE in the same folder it is located in. Your PC MIGHT restart, in that case you need to run the script untill it finishes without a restart!
 
